@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    background-image: url('/Projeto\ Casa\ Aberta\ -\ Galáxia/Site\ -\ Galáxia/imagens/Background.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: 'poppins', 'sans-serif';
+    margin: 0;
+    padding: 0;
+}
+
+/* NAVBAR */ 
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px calc(110px + var(--scrollbar-compensation));
+}
+
+.logo img {
+  height: 50px; 
+  width: auto;
+}
+
+.nav-links {
+  list-style-type: none;
+  display: flex;
+  margin: 0;
+}
+
+.nav-links li {
+  margin: 0 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 22px;
+  transition: 0.2s color;
+}
+
+.navbar a:hover {
+  color: rgb(161, 118, 211);
+}
+
+.navbar a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+:root {
+  --scrollbar-compensation: 0px;
+}
+
+@media (max-height: 100vh) {
+  :root {
+      --scrollbar-compensation: 17px;
+  }
+}
+
+
+/* CONTEÚDO */
+
+.text {
+  color: #ffffff;
+  margin-left: 50%;
+  padding-top: 80px; 
+}
+
+  .text h1 {
+    font-size: 72px;
+  }
+
+  .text p {
+    font-size: 30px;
+    display: flex;
+    text-align: justify;
+    width: 84%;
+  }
+
+  #conheca {
+    font-family: 'poppins', 'sans-serif';
+    font-size: 20PX;
+    background-color: #370b8b;
+    color: white;
+    width: 20%;
+    height: 80PX;
+    border: 7px;
+    border-radius: 30px;
+    margin-left: 63%;
+    margin-top: 20px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+
+#conheca:hover {
+    background-color: #7f5dc0; 
+    transform: scale(1.1);
+}

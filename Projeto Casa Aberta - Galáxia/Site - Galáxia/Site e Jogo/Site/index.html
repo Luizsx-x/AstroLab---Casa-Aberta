@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Projeto Casa Aberta - Galáxia/Site - Galáxia/Site e Jogo/Site/estilo.css">
+    <link rel="shortcut icon" href="/Projeto Casa Aberta - Galáxia/Site - Galáxia/imagens/Logo-Ico.ico">
+    <title>Início</title>
+</head>
+<body>
+    
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="logo">
+           <!-- <img src="/casabertasiteinicio/titulo.png" alt="AstroLab Logo" class="logo-img"> -->
+           <img src="/Projeto Casa Aberta - Galáxia/Site - Galáxia/imagens/titulo.png" class="logo-img">
+        </div>
+        <ul class="nav-links">
+            <li><a href="/Projeto Casa Aberta - Galáxia/Site - Galáxia/Site e Jogo/Site/index.html">Início</a></li>
+            <li><a href="/Projeto Casa Aberta - Galáxia/ParallaxScroll/parallax.html">Tipos</a></li>
+            <li><a href="/Projeto Casa Aberta - Galáxia/Site - Galáxia/Site e Jogo/Site/Galaxias.html">Explorar</a></li>
+            <li><a href="/Projeto Casa Aberta - Galáxia/Site - Galáxia/Site e Jogo/Jogo da Memória/pages/index-login.html">Jogar</a></li>
+        </ul>
+    </nav>
+
+    <!-- CONTEÚDO -->
+
+    <div class="text">
+        <h1>O QUE É UMA GALÁXIA</h1>
+        <p>As galáxias são conjuntos de estrelas, poeira, gases e matéria escura que formam o Universo. Elas podem ser elípticas, espirais, como a Via Láctea, ou possuir forma irregular.</p>
+    </div>
+    
+    <input type="button" value="CONHEÇA AS GALÁXIAS" id="conheca">
+    
+    <script>
+        document.getElementById('conheca').addEventListener('click', function() {
+            window.location.href = '/Projeto Casa Aberta - Galáxia/Site - Galáxia/Site e Jogo/Site/Galaxias.html'; 
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galáxias</title>
+    <link rel="shortcut icon" href="/Projeto Casa Aberta - Galáxia/Site - Galáxia/imagens/Logo-Ico.ico">
+    <link rel="stylesheet" href="estilo.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+        :root {
+            --first-color: #00000;
+            --title-color: #000000;
+            --text-color: #000;
+            --body-color: #000000;
+            --container-color: #f2f2f2;
+            --body-font: "Poppins", sans-serif;
+            --h2-font-size: 1.25rem;
+            --small-font-size: .813rem;
+        }
+        body::-webkit-scrollbar {
+    display: none; 
+}
+.banner {
+    background: linear-gradient(to right, #1a1a2e, #16213e); /* Degradê para um efeito profissional */
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    margin: 0px auto;
+    width: 80%; 
+    max-width: 800px; 
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Sombra para dar profundidade */
+}
+
+.banner h2 {
+    font-size: 24px;
+    margin: 0;
+}
+
+.banner p {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff6f61; /* Cor do botão */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #ff3b30; /* Cor ao passar o mouse */
+}
+
+        @media screen and (min-width: 1120px) {
+            :root {
+                --h2-font-size: 1.5rem;
+                --small-font-size: .875rem;
+            }
+        }
+
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+      
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+            background-size: cover;
+            font-family: var(--body-font);
+        }
+
+      
+        #titulo {
+            width: 13%;
+            padding-left: 60px;
+            margin-bottom: 50px;
+        }
+
+        .text {
+            color: #ffffff;
+            margin-left: 50%;
+        }
+
+        .text h1 {
+            font-size: 72px;
+        }
+
+        .text p {
+            font-size: 30px;
+            display: flex;
+            text-align: justify;
+            width: 84%;
+        }
+
+        #conheca {
+            font-family: 'Poppins', sans-serif;
+            font-size: 16px;
+            background-color: #370b8b;
+            color: white;
+            width: 16%;
+            height: 60px;
+            border: none; /* Removido para evitar borda indesejada */
+            border-radius: 30px;
+            margin-left: 63%;
+            margin-top: 20px;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        #conheca:hover {
+            background-color: #7f5dc0; 
+            transform: scale(1.1);
+        }
+
+        .container {
+            display: grid;
+            place-items: center;
+            margin: 0 1.5rem;
+            padding: 5rem 0;
+        }
+
+        .card__container {
+            display: grid;
+            row-gap: 3.5rem;
+        }
+
+        .card__article {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card__img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 5%;
+            border-color: #770000;
+        }
+
+        .card__data {
+            width: 280px;
+            background-color: var(--container-color);
+            padding: 1.5rem 2rem;
+            box-shadow: 0 8px 24px hsla(0, 0%, 0%, .15);
+            border-radius: 1rem;
+            position: absolute;
+            bottom: -9rem;
+            left: 0;
+            right: 0;
+            margin-inline: auto;
+            opacity: 0;
+            transition: opacity 1s 1s;
+        }
+
+        .card__description {
+            display: block;
+            font-size: var(--small-font-size);
+            margin-bottom: .25rem;
+        }
+
+        .card__title {
+            font-size: var(--h2-font-size);
+            font-weight: 500;
+            color: var(--title-color);
+            margin-bottom: .75rem;
+        }
+
+        .card__button {
+            text-decoration: none;
+            font-size: var(--small-font-size);
+            font-weight: 500;
+            color: #000000;
+        }
+
+        .card__button:hover {
+            text-decoration: underline;
+        }
+
+        .card__article:hover .card__data {
+            animation: show-data 1s forwards;
+            opacity: 1;
+            transition: opacity .3s;
+        }
+
+        .card__article:hover {
+            animation: remove-overflow 2s forwards;
+        }
+
+        .card__article:not(:hover) {
+            animation: show-overflow 2s forwards;
+        }
+
+        .card__article:not(:hover) .card__data {
+            animation: remove-data 1s forwards;
+        }
+
+        @keyframes show-data {
+            50% {
+                transform: translateY(-10rem);
+            }
+            100% {
+                transform: translateY(-7rem);
+            }
+        }
+
+        @keyframes remove-overflow {
+            to {
+                overflow: initial;
+            }
+        }
+
+        @keyframes remove-data {
+            0% {
+                transform: translateY(-7rem);
+            }
+            50% {
+                transform: translateY(-10rem);
+            }
+            100% {
+                transform: translateY(.5rem);
+            }
+        }
+
+        @keyframes show-overflow {
+            0% {
+                overflow: initial;
+                pointer-events: none;
+            }
+            50% {
+                overflow: hidden;
+            }
+        }
+
+        @media screen and (max-width: 340px) {
+            .container {
+                margin-inline: 1rem;
+            }
+
+            .card__data {
+                width: 250px;
+                padding: 1rem;
+            }
+        }
+
+        @media screen and (min-width: 768px) {
+            .card__container {
+                grid-template-columns: repeat(2, 1fr);
+                column-gap: 1.5rem;
+            }
+        }
+
+        @media screen and (min-width: 1120px) {
+            .container {
+                height: 100vh;
+            }
+
+            .card__container {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .card__img {
+                width: 348px;
+            }
+
+            .card__data {
+                width: 316px;
+                padding-inline: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="logo">
+           <!-- <img src="/casabertasiteinicio/titulo.png" alt="AstroLab Logo" class="logo-img"> -->
+           <img src="/Projeto Casa Aberta - Galáxia/Site - Galáxia/imagens/titulo.png" class="logo-img">
+        </div>
+        <ul class="nav-links">
+            <li><a href="/Projeto Casa Aberta - Galáxia/Site - Galáxia/Site e Jogo/Site/index.html">Início</a></li>
+            <li><a href="/Projeto Casa Aberta - Galáxia/ParallaxScroll/parallax.html">Tipos</a></li>
+            <li><a href="/Projeto Casa Aberta - Galáxia/Site - Galáxia/Site e Jogo/Site/Galaxias.html">Explorar</a></li>
+            <li><a href="/Projeto Casa Aberta - Galáxia/Site - Galáxia/Site e Jogo/Jogo da Memória/pages/index-login.html">Jogar</a></li>
+        </ul>
+    </nav>
+
+
+    <div class="container">
+      <div class="banner">
+        <h2>Explore o Universo</h2>
+        <p>Descubra a beleza e a diversidade das galáxias ao redor do cosmos.</p>
+      </div>
+        <div class="card__container">
+            <article class="card__article">
+                <img src="/Projeto Casa Aberta - Galáxia/Site - Galáxia/imagens/via_lactea321.jpg" alt="Via Lactea" class="card__img">
+                <div class="card__data">
+                    <span class="card__description">Via Lactea</span>
+                    <h2 class="card__title">Espiral</h2>
+                    <a href="#" class="card__button">Saiba Mais</a>
+                </div>
+            </article>
+            <article class="card__article">
+                <img src="/Projeto Casa Aberta - Galáxia/Site - Galáxia/imagens/irregular.jpg" alt="Irregular" class="card__img">
+                <div class="card__data">
+                    <span class="card__description">Seyfert</span>
+                    <h2 class="card__title">Irregular</h2>
+                    <a href="#" class="card__button">Saiba Mais</a>
+                </div>
+            </article>
+            <article class="card__article">
+                <img src="/Projeto Casa Aberta - Galáxia/Site - Galáxia/imagens/eliptica.jpg" alt="Eliptica" class="card__img">
+                <div class="card__data">
+                    <span class="card__description">NGC 1316</span>
+                    <h2 class="card__title">Eliptica</h2>
+                    <a href="#" class="card__button">Saiba Mais</a>
+                </div>
+            </article>
+        </div>
+    </div>
+</body>
+</html>

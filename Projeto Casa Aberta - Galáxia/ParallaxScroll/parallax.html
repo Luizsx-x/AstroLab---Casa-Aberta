@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./stylescroll.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <link rel="shortcut icon" href="/Projeto Casa Aberta - Galáxia/Site - Galáxia/imagens/Logo-Ico.ico">
+    <title>Galáxia</title>
+</head>
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="logo">
+           <!-- <img src="/casabertasiteinicio/titulo.png" alt="AstroLab Logo" class="logo-img"> -->
+           <img src="titulo.png" class="logo-img">
+        </div>
+        <ul class="nav-links">
+            <li><a href="/Projeto Casa Aberta - Galáxia/Site - Galáxia/Site e Jogo/Site/index.html">Início</a></li>
+            <li><a href="/Projeto Casa Aberta - Galáxia/ParallaxScroll/parallax.html">Tipos</a></li>
+            <li><a href="/Projeto Casa Aberta - Galáxia/Site - Galáxia/Site e Jogo/Site/Galaxias.html">Explorar</a></li>
+            <li><a href="/Projeto Casa Aberta - Galáxia/Site - Galáxia/Site e Jogo/Jogo da Memória/pages/index-login.html">Jogar</a></li>
+        </ul>
+    </nav>
+
+    <!-- SEÇÃO UM -->
+    <section class="sec-01">
+        <div class="container">
+            <h2 class="main-title">Tipos de Galáxias</h2>
+            <div class="content">
+                <div class="image">
+                    <img src="img1.jpg">
+                </div>
+                <div class="text-box">
+                    <h3>Que tipos de galáxia existem?</h3>
+                    <p>Os astrônomos classificam as galáxias em três categorias principais: elípticas, espirais e irregulares. Essas galáxias abrangem uma ampla gama de tamanhos, 
+                        desde galáxias anãs contendo apenas 100 milhões de estrelas até galáxias gigantes com mais de um trilhão de estrelas.</p>
+                        <a href="/Projeto Casa Aberta - Galáxia/Site - Galáxia/Site e Jogo/Site/Galaxias.html" class="btn-conheca">Ver Mais</a>
+                    </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO DOIS -->
+    <section class="sec-02">
+        <div class="container">
+            <h3 class="section-title">Elípticas</h3>
+                <div class="content">
+                    <div class="image">
+                        <img src="img2.jpg">
+                    </div>
+                    <div class="info">
+                        <h4 class="info-title">Características</h4>
+                        <p>Elípticas, que respondem por cerca de um terço das galáxias observadas, variam de quase circulares a muito alongadas. Elas possuem comparativamente pouco gás e poeira, contêm estrelas mais velhas e não estão mais formando estrelas ativamente. As maiores e mais raras delas, chamadas elípticas gigantes, têm cerca de 300.000 anos-luz de diâmetro. Os astrônomos teorizam que elas são formadas pela fusão de galáxias menores. Muito mais comuns são as elípticas anãs, que têm apenas alguns milhares de anos-luz de largura.</p>
+                        <a href="/Projeto Casa Aberta - Galáxia/Site - Galáxia/Site e Jogo/Site/Galaxias.html" class="btn-conheca">Conheça</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO TRÊS -->
+    <section class="sec-03">
+        <div class="container">
+            <h3 class="section-title">Espirais</h3>
+                <div class="content">
+                    <div class="info">
+                        <h4 class="info-title">Características</h4>
+                        <p>Galáxias espirais aparecem como discos planos, azul-esbranquiçados de estrelas, gás e poeira com protuberâncias amareladas em seus centros. Essas galáxias são divididas em dois grupos: espirais normais e espirais barradas. Em espirais barradas, a barra de estrelas atravessa a protuberância central. Os braços das espirais barradas geralmente começam no final da barra em vez de na protuberância. As espirais estão ativamente formando estrelas e compreendem uma grande fração de todas as galáxias no universo local.</p>
+                        <a href="/Projeto Casa Aberta - Galáxia/Site - Galáxia/Site e Jogo/Site/Galaxias.html" class="btn-conheca">Conheça</a>
+                    </div>
+                    <div class="image">
+                        <img src="img3.jpg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <!-- SEÇÃO QUATRO -->
+     <section class="sec-04">
+        <div class="container">
+            <h3 class="section-title">Irregulares</h3>
+                <div class="content">
+                    <div class="image">
+                        <img src="img4.jpg">
+                    </div>
+                    <div class="info">
+                        <h4 class="info-title">Características</h4>
+                        <p>Galáxias irregulares, que têm muito pouca poeira, não são nem em forma de disco nem elípticas. Os astrônomos frequentemente veem galáxias irregulares quando olham profundamente para o universo, o que é equivalente a olhar para trás no tempo. Essas galáxias são abundantes no universo primitivo, antes que espirais e elípticas se desenvolvessem.</p>
+                        <a href="/Projeto Casa Aberta - Galáxia/Site - Galáxia/Site e Jogo/Site/Galaxias.html" class="btn-conheca">Conheça</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        ScrollReveal({
+            // reset: true,
+            distance: '60px',
+            duration: 2500,
+            delay: 400
+        });
+
+        ScrollReveal().reveal('.main-title, .section-title', { delay: 500, origin: 'left' });
+        ScrollReveal().reveal('.sec-01 .image, .info', { delay: 600, origin: 'bottom' });
+        ScrollReveal().reveal('.text-box', { delay: 700, origin: 'bottom' });
+        ScrollReveal().reveal('.sec-02 .image, .sec-03 .image, .sec-04 .image', { delay: 500, origin: 'top' });
+        ScrollReveal().reveal('.media-info li', { delay: 500, origin: 'left', interval: 200 });
+                
+    </script>
+</body>
+</html>
